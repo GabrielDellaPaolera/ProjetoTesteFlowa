@@ -1,13 +1,13 @@
 public static class OrderAccumulator
 {
-    private const double valorMaximo = 1000000;
+    private const decimal valorMaximo = 1000000;
 
  public static OrderResponse Processar(OrderRequest order)
     {
-        double exposicaoAtual = Storage.Exposicoes[order.Ativo];
-        double impacto = order.Preco * order.Quantidade;
+        decimal exposicaoAtual = Storage.Exposicoes[order.Ativo];
+        decimal impacto = order.Preco * order.Quantidade;
 
-        double novaExposicao = exposicaoAtual;
+        decimal novaExposicao = exposicaoAtual;
 
         if (order.Lado == "C")
         {

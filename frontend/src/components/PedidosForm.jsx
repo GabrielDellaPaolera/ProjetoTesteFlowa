@@ -41,7 +41,7 @@ function PedidosForm(){
 
         <div>
             <label>Lado</label>
-            <select value ={lado} OnChange ={ e => setLado(e.target.value)}>
+            <select value ={lado} onChange ={ e => setLado(e.target.value)}>
             <option value = "C"> Compra</option>
             <option value = "V"> Venda</option>
             </select>
